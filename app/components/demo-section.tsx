@@ -67,7 +67,9 @@ export function DemoSection() {
 
 /* ── Auto-scrolling testimonial row ── */
 
-function TestimonialRow({ testimonials, direction, speed }: { testimonials: typeof testimonials; direction: "left" | "right"; speed: number }) {
+type Testimonial = { text: string; author: string; role: string; emoji: string };
+
+function TestimonialRow({ testimonials, direction, speed }: { testimonials: Testimonial[]; direction: "left" | "right"; speed: number }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
   const posRef = useRef(0);
