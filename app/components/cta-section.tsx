@@ -54,7 +54,7 @@ export function CtaSection() {
                 Get ClawSuite
               </a>
               <a
-                href="https://clawsuite.io/docs"
+                href="https://github.com/outsourc-e/clawsuite#readme"
                 className="inline-flex items-center justify-center rounded-xl border border-stone-600 bg-stone-900/80 px-8 py-4 text-base font-medium text-stone-100 transition hover:border-stone-400 hover:bg-stone-800 hover:-translate-y-0.5"
               >
                 Read the Docs

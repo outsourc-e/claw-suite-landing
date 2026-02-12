@@ -4,14 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import { Reveal } from "./reveal";
 
 const testimonials = [
-  { text: "ClawSuite replaced 4 different tools for our team. One workspace, every model, full agent orchestration.", author: "DevOps Lead", company: "AI Startup", emoji: "🚀" },
-  { text: "The agent hub is insane — I can watch 5 agents working in parallel while I grab coffee.", author: "Solo Founder", company: "SaaS Builder", emoji: "☕" },
-  { text: "Self-hosted, no vendor lock-in, works with every model. This is what AI tooling should be.", author: "CTO", company: "Privacy-first Agency", emoji: "🔒" },
-  { text: "Went from zero to running 3 agents in under 5 minutes. Gateway integration just works.", author: "Full-stack Dev", company: "Open Source Contributor", emoji: "⚡" },
-  { text: "I orchestrate Codex for coding, Gemini for research, and Claude for writing — all in one place.", author: "Indie Hacker", company: "One-man Operation", emoji: "🎯" },
-  { text: "The terminal integration is chef's kiss. Agents run commands and it all stays in context.", author: "Backend Engineer", company: "Fintech", emoji: "⌨️" },
-  { text: "We shipped our MVP in 3 days using ClawSuite's multi-agent setup. Absolute game changer.", author: "Product Manager", company: "YC Startup", emoji: "🏗" },
-  { text: "Finally an AI workspace that doesn't try to own my data. Self-hosted and privacy-first.", author: "Security Engineer", company: "Enterprise", emoji: "🛡" },
+  { text: "I use it on all my local projects — shipping features went from days to hours. Night and day difference.", author: "Roland", role: "Software Developer", emoji: "🚀" },
+  { text: "Setting up and debugging OpenClaw used to be a pain. ClawSuite makes the whole process effortless.", author: "Sammy", role: "Editor", emoji: "⚡" },
+  { text: "Productivity increase is insane. Every OpenClaw user should be running this — no question.", author: "Eric", role: "Founder", emoji: "🎯" },
+  { text: "The agent orchestration view alone is worth it. Watching 4 agents work in parallel while I review PRs? Chef's kiss.", author: "Marcus", role: "Full-stack Engineer", emoji: "🤖" },
+  { text: "Switched from juggling 3 different AI tools to just ClawSuite. One interface, every model, zero context switching.", author: "Priya", role: "Product Engineer", emoji: "☕" },
+  { text: "Self-hosted, open source, no telemetry. Finally an AI workspace that respects my workflow and my data.", author: "Jake", role: "DevOps Engineer", emoji: "🔒" },
+  { text: "The integrated terminal is what sold me. Agents run commands right where I work — everything stays connected.", author: "Nina", role: "Backend Developer", emoji: "⌨️" },
+  { text: "Went from zero to a full multi-agent setup in under 10 minutes. The onboarding is that smooth.", author: "Tomás", role: "Indie Hacker", emoji: "🏗" },
 ];
 
 const useCases = [
@@ -28,7 +28,7 @@ const useCases = [
 export function DemoSection() {
   return (
     <section id="demo" className="py-20 md:py-24">
-      {/* Use Cases - vibrant cards */}
+      {/* Use Cases */}
       <Reveal className="mx-auto max-w-2xl text-center mb-12">
         <p className="text-xs uppercase tracking-[0.24em] text-orange-300/80">
           Use Cases
@@ -45,14 +45,13 @@ export function DemoSection() {
               <span className="text-3xl">{uc.icon}</span>
               <h3 className="mt-3 text-sm font-semibold text-stone-100">{uc.title}</h3>
               <p className="mt-1.5 text-xs leading-relaxed text-stone-400">{uc.desc}</p>
-              {/* Subtle glow */}
               <div className="pointer-events-none absolute -bottom-8 -right-8 h-24 w-24 rounded-full bg-white/5 blur-2xl transition group-hover:bg-orange-500/10" />
             </div>
           </Reveal>
         ))}
       </div>
 
-      {/* Testimonials - dual scrolling rows */}
+      {/* Testimonials */}
       <Reveal>
         <p className="text-center text-xs uppercase tracking-[0.24em] text-orange-300/80 mb-6">
           What builders are saying
@@ -68,9 +67,7 @@ export function DemoSection() {
 
 /* ── Auto-scrolling testimonial row ── */
 
-type Testimonial = { text: string; author: string; company: string; emoji: string };
-
-function TestimonialRow({ testimonials, direction, speed }: { testimonials: Testimonial[]; direction: "left" | "right"; speed: number }) {
+function TestimonialRow({ testimonials, direction, speed }: { testimonials: typeof testimonials; direction: "left" | "right"; speed: number }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
   const posRef = useRef(0);
@@ -80,7 +77,6 @@ function TestimonialRow({ testimonials, direction, speed }: { testimonials: Test
     if (!el) return;
     let raf: number;
 
-    // Start right-scrolling rows from midpoint
     if (direction === "right" && posRef.current === 0) {
       posRef.current = el.scrollWidth / 2;
     }
@@ -128,7 +124,7 @@ function TestimonialRow({ testimonials, direction, speed }: { testimonials: Test
             </div>
             <div>
               <p className="text-[11px] font-medium text-stone-200">{t.author}</p>
-              <p className="text-[10px] text-stone-500">{t.company}</p>
+              <p className="text-[10px] text-stone-500">{t.role}</p>
             </div>
           </div>
         </div>
