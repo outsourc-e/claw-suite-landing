@@ -58,7 +58,7 @@ export function ProductShowcase() {
 
   return (
     <div
-      className="mx-auto mt-14 max-w-5xl"
+      className="mx-auto mt-8 max-w-5xl md:mt-14"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -70,7 +70,7 @@ export function ProductShowcase() {
             <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
             <span className="h-3 w-3 rounded-full bg-[#28c840]" />
           </div>
-          <div className={`rounded-md border ${cardBorder} ${inputBg} px-3 py-1 text-[11px] ${textMuted} font-mono`}>
+          <div className={`hidden rounded-md border ${cardBorder} ${inputBg} px-3 py-1 text-[11px] ${textMuted} font-mono md:block`}>
             ClawSuite — localhost:3000
           </div>
           {/* Dark/Light toggle */}
@@ -82,10 +82,33 @@ export function ProductShowcase() {
           </button>
         </div>
 
+        {/* ── Mobile Screen Tabs ── */}
+        <div className={`border-b ${borderC} px-2 py-2 md:hidden ${dark ? "bg-stone-950/70" : "bg-stone-50/80"}`}>
+          <div className="flex gap-1.5 overflow-x-auto pb-1">
+            {navItems.map((item) => {
+              const isActive = item.screen === active;
+              return (
+                <button
+                  key={`mobile-${item.label}`}
+                  onClick={() => item.screen && setActive(item.screen)}
+                  className={`shrink-0 rounded-full px-2.5 py-1 text-[10px] font-medium transition ${
+                    isActive
+                      ? "bg-orange-500/15 text-orange-400"
+                      : `${textSecondary} ${hoverBg}`
+                  }`}
+                >
+                  <span className="mr-1">{item.icon}</span>
+                  <span>{item.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
         {/* ── App Layout ── */}
-        <div className={`grid h-[520px] grid-cols-[220px_1fr] ${bg}`}>
+        <div className={`h-[360px] md:grid md:h-[520px] md:grid-cols-[220px_1fr] ${bg}`}>
           {/* ── SIDEBAR ── */}
-          <div className={`flex flex-col border-r ${borderC} ${bgSidebar} overflow-hidden`}>
+          <div className={`hidden flex-col overflow-hidden border-r md:flex ${borderC} ${bgSidebar}`}>
             {/* Header */}
             <div className={`flex items-center gap-2 px-3 py-3 border-b ${borderC}`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -161,9 +184,9 @@ export function ProductShowcase() {
           </div>
 
           {/* ── MAIN CONTENT ── */}
-          <div className="flex flex-col overflow-hidden">
+          <div className="flex h-full min-h-0 flex-col overflow-hidden">
             {/* Screen nav bar - fixed strip */}
-            <div className={`flex items-center justify-between border-b ${borderC} px-3 py-1.5 shrink-0 ${dark ? "bg-stone-950/60" : "bg-stone-50/80"}`}>
+            <div className={`hidden shrink-0 items-center justify-between border-b ${borderC} px-3 py-1.5 md:flex ${dark ? "bg-stone-950/60" : "bg-stone-50/80"}`}>
               <div className="flex items-center gap-1">
                 {SCREENS.map((screen) => (
                   <button

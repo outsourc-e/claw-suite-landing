@@ -4,7 +4,7 @@ export function CtaSection() {
   return (
     <section className="py-16 md:py-20">
       <Reveal>
-        <div className="relative overflow-hidden rounded-3xl border-2 border-orange-500/30 bg-gradient-to-br from-orange-500/10 via-stone-900/80 to-stone-950 p-10 sm:p-14 backdrop-blur-xl shadow-2xl shadow-orange-500/10">
+        <div className="relative overflow-hidden rounded-3xl border-2 border-orange-500/30 bg-gradient-to-br from-orange-500/10 via-stone-900/80 to-stone-950 p-6 sm:p-10 md:p-14 backdrop-blur-xl shadow-2xl shadow-orange-500/10">
           {/* Glow orbs */}
           <div className="pointer-events-none absolute -left-20 -top-20 h-60 w-60 rounded-full bg-orange-500/15 blur-[80px]" />
           <div className="pointer-events-none absolute -right-16 -bottom-16 h-52 w-52 rounded-full bg-amber-500/10 blur-[60px]" />
@@ -13,7 +13,7 @@ export function CtaSection() {
             <p className="text-xs uppercase tracking-[0.24em] text-orange-400 font-semibold">
               Get started in 2 minutes
             </p>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight text-stone-50 md:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-stone-50 sm:text-4xl md:text-5xl">
               Clone. Configure.{" "}
               <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">Ship.</span>
             </h2>
@@ -29,11 +29,11 @@ export function CtaSection() {
                 <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
                 <span className="ml-auto text-[10px] text-stone-600 font-mono">terminal</span>
               </div>
-              <div className="p-5 font-mono text-sm text-left">
-                <div className="text-stone-300">
+              <div className="overflow-x-auto p-4 sm:p-5 font-mono text-xs sm:text-sm text-left">
+                <div className="text-stone-300 whitespace-nowrap">
                   <span className="text-orange-400">$</span> git clone https://github.com/outsourc-e/clawsuite
                 </div>
-                <div className="mt-1 text-stone-300">
+                <div className="mt-1 text-stone-300 whitespace-nowrap">
                   <span className="text-orange-400">$</span> npm install &amp;&amp; npm run dev
                 </div>
                 <div className="mt-2 text-emerald-400 text-xs">
