@@ -14,7 +14,7 @@ const linkGroups = [
     links: [
       { label: "OpenClaw", href: "https://openclaw.ai" },
       { label: "ClawHub", href: "https://clawhub.ai" },
-      { label: "Documentation", href: "https://clawsuite.io/docs" },
+      { label: "Documentation", href: "https://github.com/outsourc-e/clawsuite#readme" },
     ],
   },
   {

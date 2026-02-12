@@ -3,7 +3,7 @@ import { Brand } from "./brand";
 const navLinks = [
   { href: "#features", label: "Features" },
   { href: "#demo", label: "Demo" },
-  { href: "https://docs.openclaw.ai", label: "Docs" },
+  { href: "https://github.com/outsourc-e/clawsuite#readme", label: "Docs" },
 ];
 
 export function LandingNav() {
@@ -29,14 +29,6 @@ export function LandingNav() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href="https://discord.com/invite/clawd"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden rounded-lg border border-stone-700/70 px-3 py-2 text-sm text-stone-200 transition hover:border-stone-600 hover:bg-stone-900/80 sm:inline-flex"
-          >
-            Discord
-          </a>
           <a
             href="https://github.com/outsourc-e/clawsuite"
             target="_blank"
