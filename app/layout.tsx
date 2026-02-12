@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ClawSuite — Open Source AI Workspace",
+  title: "ClawSuite — The All-in-One Command Center for OpenClaw Agents",
   description:
-    "Free, open-source AI workspace built on OpenClaw. Chat with any model, orchestrate agents, run terminal commands — all from one self-hosted interface.",
+    "Free, open-source AI workspace. Chat with any model, orchestrate agents, run terminal commands, and manage your gateway — all from one self-hosted interface.",
   alternates: {
     canonical: "https://clawsuite.io",
   },
@@ -16,13 +16,9 @@ export const metadata: Metadata = {
     siteName: "ClawSuite",
     locale: "en_US",
     type: "website",
-    images: [{ url: "https://clawsuite.io/og.png", width: 1200, height: 630, alt: "ClawSuite — The all-in-one command center for OpenClaw agents" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ClawSuite — Open Source AI Workspace",
-    description: "Free, self-hosted AI workspace. Multi-model chat, agent orchestration, terminal integration.",
-    images: ["https://clawsuite.io/og.png"],
     creator: "@clawsuite",
   },
   icons: {
