@@ -25,11 +25,10 @@ export function HeroSection() {
         </div>
 
         <h1 className="mx-auto mt-8 max-w-4xl text-balance text-3xl font-semibold tracking-tight text-stone-50 sm:text-4xl md:text-5xl lg:text-7xl">
-          The all-in-one{" "}
+          Command center{" "}
           <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400 bg-clip-text text-transparent">
-            command center
-          </span>{" "}
-          for OpenClaw agents
+            for OpenClaw
+          </span>
         </h1>
 
         <p className="mx-auto mt-6 max-w-3xl text-pretty text-base leading-relaxed text-stone-300 md:text-lg lg:text-xl">

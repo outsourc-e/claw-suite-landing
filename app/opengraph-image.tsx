@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "ClawSuite — The all-in-one command center for OpenClaw agents";
+  "ClawSuite — Command Center for OpenClaw";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -79,7 +79,7 @@ export default function Image() {
               lineHeight: 1.2,
             }}
           >
-            The all-in-one command center
+            Command Center
           </div>
           <div
             style={{
@@ -91,7 +91,7 @@ export default function Image() {
               color: "#f97316",
             }}
           >
-            for OpenClaw agents
+            for OpenClaw
           </div>
         </div>
 

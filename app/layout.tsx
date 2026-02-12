@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ClawSuite — The All-in-One Command Center for OpenClaw Agents",
+  title: "ClawSuite — Command Center for OpenClaw",
   description:
     "Free, open-source AI workspace. Chat with any model, orchestrate agents, run terminal commands, and manage your gateway — all from one self-hosted interface.",
   alternates: {
     canonical: "https://clawsuite.io",
   },
   openGraph: {
-    title: "ClawSuite — Open Source AI Workspace",
+    title: "ClawSuite — Command Center for OpenClaw",
     description:
       "Free, self-hosted AI workspace. Multi-model chat, agent orchestration, terminal integration. Built on OpenClaw.",
     url: "https://clawsuite.io",
