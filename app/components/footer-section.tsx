@@ -63,7 +63,7 @@ export function FooterSection() {
       <div className="md:hidden px-6 py-10 text-center">
         <div className="flex justify-center mb-6">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/favicon.svg" alt="ClawSuite" className="h-10 w-10" />
+          <img src="/favicon.svg" alt="ClawSuite" className="h-10 w-10 animate-logo-bounce hover:[animation-play-state:paused] hover:scale-110 hover:drop-shadow-[0_0_24px_rgba(249,115,22,0.5)] transition-all duration-300" />
         </div>
         <div className="mt-6 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm">
           {linkGroups.flatMap((g) => g.links).map((link) => (
