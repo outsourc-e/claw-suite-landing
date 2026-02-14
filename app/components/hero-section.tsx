@@ -7,16 +7,19 @@ export function HeroSection() {
       {/* Centered logo fading into heading */}
       <Reveal className="mx-auto max-w-5xl text-center">
         <div className="flex justify-center mb-6">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/favicon.svg"
-            alt="ClawSuite"
-            className="h-16 w-16 md:h-20 md:w-20 opacity-90"
-            style={{
-              maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
-              WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
-            }}
-          />
+          <a
+            href="https://github.com/outsourc-e/clawsuite"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-block"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/favicon.svg"
+              alt="ClawSuite"
+              className="h-20 w-20 md:h-28 md:w-28 opacity-90 animate-logo-bounce group-hover:[animation-play-state:paused] group-hover:scale-110 group-hover:drop-shadow-[0_0_24px_rgba(249,115,22,0.5)] transition-all duration-300"
+            />
+          </a>
         </div>
 
         <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-orange-400/20 bg-stone-900/80 px-4 py-2 text-xs text-orange-100 sm:text-sm">
@@ -26,7 +29,7 @@ export function HeroSection() {
 
         <h1 className="mx-auto mt-8 max-w-4xl text-balance text-3xl font-semibold tracking-tight text-stone-50 sm:text-4xl md:text-5xl lg:text-7xl">
           Command center{" "}
-          <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-amber-300 bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(249,115,22,0.3)]">
             for OpenClaw
           </span>
         </h1>
@@ -50,7 +53,7 @@ export function HeroSection() {
 
         {/* Social proof — GitHub-based */}
         <p className="mt-6 text-sm text-stone-500">
-          Open source · MIT licensed · Self-hosted · No telemetry
+          MIT licensed. Self-hosted. Zero telemetry. Your rules.
         </p>
       </Reveal>
 

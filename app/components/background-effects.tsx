@@ -21,6 +21,15 @@ export function BackgroundEffects() {
       <div className="gradient-orb gradient-orb-a" />
       <div className="gradient-orb gradient-orb-b" />
       <div className="gradient-orb gradient-orb-c" />
+      {/* Subtle purple depth orb */}
+      <div className="gradient-orb" style={{
+        top: "45%",
+        right: "15%",
+        height: "18rem",
+        width: "18rem",
+        background: "radial-gradient(circle, rgba(168, 85, 247, 0.12), transparent 70%)",
+        animation: "drift-b 26s ease-in-out infinite reverse",
+      }} />
       {/* Floating particles — deterministic for SSR */}
       {PARTICLES.map((p, i) => (
         <div

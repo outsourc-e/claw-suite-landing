@@ -11,7 +11,7 @@ export function CtaSection() {
 
           <div className="relative text-center">
             <p className="text-xs uppercase tracking-[0.24em] text-orange-400 font-semibold">
-              Get started in 2 minutes
+              Get started in 3 minutes
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-stone-50 sm:text-4xl md:text-5xl">
               Clone. Configure.{" "}

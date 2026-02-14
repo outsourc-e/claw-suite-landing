@@ -39,7 +39,7 @@ export function PricingSection() {
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {highlights.map((item, index) => (
           <Reveal key={item.title} delay={index * 80}>
-            <article className="h-full rounded-2xl border border-stone-800/80 bg-stone-900/60 p-6 backdrop-blur text-center">
+            <article className="card-gradient-border h-full rounded-2xl border border-stone-800/80 bg-stone-900/60 p-6 backdrop-blur text-center transition hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-500/5">
               <span className="text-3xl">{item.icon}</span>
               <h3 className="mt-4 text-base font-semibold text-stone-100">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-stone-400">{item.description}</p>
@@ -47,6 +47,12 @@ export function PricingSection() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal delay={200}>
+        <p className="mt-12 mx-auto max-w-xl text-center text-sm text-stone-500 leading-relaxed">
+          ClawSuite isn&apos;t trying to replace ChatGPT. It&apos;s for people who want multi-model access, agent orchestration, and full control over their data.
+        </p>
+      </Reveal>
 
     </section>
   );

@@ -52,20 +52,6 @@ const features: Feature[] = [
     accent: "border-amber-500/30 from-amber-500/10 to-stone-900/60 hover:border-amber-500/50 hover:shadow-amber-500/10",
     iconBg: "bg-amber-500/15 text-amber-400",
   },
-  {
-    title: "100% free & open source",
-    description: "MIT licensed. No premium tiers, no usage limits. Fork it, self-host it, contribute back.",
-    icon: OpenSourceIcon,
-    accent: "border-pink-500/30 from-pink-500/10 to-stone-900/60 hover:border-pink-500/50 hover:shadow-pink-500/10",
-    iconBg: "bg-pink-500/15 text-pink-400",
-  },
-  {
-    title: "Self-hosted & private",
-    description: "Your data never leaves your machine. No cloud dependency, no telemetry, no vendor lock-in.",
-    icon: ShieldIcon,
-    accent: "border-red-500/30 from-red-500/10 to-stone-900/60 hover:border-red-500/50 hover:shadow-red-500/10",
-    iconBg: "bg-red-500/15 text-red-400",
-  },
 ];
 
 export function FeaturesSection() {
@@ -76,7 +62,7 @@ export function FeaturesSection() {
           What&apos;s inside
         </p>
         <h2 className="mt-4 text-3xl font-semibold tracking-tight text-stone-100 md:text-4xl">
-          Everything you need to run AI operations
+          Chat, code, orchestrate — unified
         </h2>
       </Reveal>
 
@@ -97,7 +83,7 @@ export function FeaturesSection() {
         </div>
       </Reveal>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature, index) => (
           <Reveal key={feature.title} delay={index * 70}>
             <article className={`card-gradient-border group relative h-full overflow-hidden rounded-2xl border p-5 backdrop-blur transition hover:-translate-y-1 hover:shadow-lg hover:scale-[1.02] ${feature.accent} bg-gradient-to-br`}>
