@@ -61,13 +61,10 @@ export function FooterSection() {
 
       {/* Mobile: centered, minimal */}
       <div className="md:hidden px-6 py-10 text-center">
-        <div className="flex justify-center mb-3">
+        <div className="flex justify-center mb-6">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/favicon.svg" alt="ClawSuite" className="h-10 w-10" />
         </div>
-        <p className="text-sm text-stone-400">
-          Open-source command center for AI agents.
-        </p>
         <div className="mt-6 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm">
           {linkGroups.flatMap((g) => g.links).map((link) => (
             <a
