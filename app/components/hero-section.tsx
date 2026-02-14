@@ -53,7 +53,7 @@ export function HeroSection() {
 
         {/* Social proof — GitHub-based */}
         <p className="mt-6 text-sm text-stone-500">
-          MIT licensed. Self-hosted. Zero telemetry. Your rules.
+          Self-hosted. Your rules.
         </p>
       </Reveal>
 
