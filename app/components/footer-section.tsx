@@ -29,7 +29,7 @@ const linkGroups = [
 
 export function FooterSection() {
   return (
-    <footer className="relative z-10 border-t border-stone-800/70 bg-stone-950/70">
+    <footer className="relative z-10 border-t border-stone-800/70 bg-stone-950/70 pb-16 md:pb-0">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-12 md:grid-cols-4 md:px-10">
         <div className="md:col-span-1">
           <Brand />
