@@ -21,9 +21,9 @@ export default function Home() {
         className="absolute top-4 right-4 z-50 md:hidden group"
       >
         <div className="relative flex items-center justify-center h-16 w-16">
-          {/* Multi-point star */}
-          <svg className="absolute inset-0 h-full w-full text-[#ff6154] drop-shadow-[0_2px_8px_rgba(255,97,84,0.4)] transition group-hover:scale-110 group-hover:drop-shadow-[0_2px_12px_rgba(255,97,84,0.6)]" viewBox="0 0 100 100" fill="currentColor">
-            <path d="M50 0 L58 35 L95 35 L65 57 L75 93 L50 72 L25 93 L35 57 L5 35 L42 35 Z" />
+          {/* Starburst */}
+          <svg className="absolute inset-0 h-full w-full text-[#ff6154] drop-shadow-[0_2px_8px_rgba(255,97,84,0.4)] transition group-hover:scale-110 group-hover:rotate-12 group-hover:drop-shadow-[0_2px_12px_rgba(255,97,84,0.6)]" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M50 2 L58 28 L78 8 L68 32 L97 30 L74 44 L98 58 L70 56 L80 82 L58 66 L56 98 L46 68 L24 88 L36 60 L4 64 L30 48 L2 34 L32 36 L18 12 L40 30 Z" />
           </svg>
           {/* P logo centered */}
           <svg className="relative h-5 w-5 text-white z-10" viewBox="0 0 40 40" fill="currentColor"><path d="M22.667 20H17.333V13.333H22.667C24.507 13.333 26 14.827 26 16.667C26 18.507 24.507 20 22.667 20ZM22.667 10H14V30H17.333V23.333H22.667C26.347 23.333 29.333 20.347 29.333 16.667C29.333 12.987 26.347 10 22.667 10Z"/></svg>
