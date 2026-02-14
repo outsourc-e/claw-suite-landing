@@ -22,6 +22,20 @@ export function HeroSection() {
           </a>
         </div>
 
+        {/* Mobile PH badge */}
+        <a
+          href="https://www.producthunt.com/products/clawsuite"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mx-auto mb-4 inline-flex items-center gap-2 rounded-full bg-[#ff6154]/10 border border-[#ff6154]/30 px-4 py-2 text-xs text-[#ff6154] transition hover:bg-[#ff6154]/20 md:hidden"
+        >
+          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#ff6154]">
+            <svg className="h-3 w-3 text-white" viewBox="0 0 40 40" fill="currentColor"><path d="M22.667 20H17.333V13.333H22.667C24.507 13.333 26 14.827 26 16.667C26 18.507 24.507 20 22.667 20ZM22.667 10H14V30H17.333V23.333H22.667C26.347 23.333 29.333 20.347 29.333 16.667C29.333 12.987 26.347 10 22.667 10Z"/></svg>
+          </span>
+          Featured on Product Hunt
+          <svg className="h-3 w-3" viewBox="0 0 24 24" fill="currentColor"><path d="M7 14l5-5 5 5H7z"/></svg>
+        </a>
+
         <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-orange-400/20 bg-stone-900/80 px-4 py-2 text-xs text-orange-100 sm:text-sm">
           <span className="h-2 w-2 animate-pulse rounded-full bg-orange-400" />
           Free &amp; open source — built on OpenClaw
