@@ -26,34 +26,25 @@ const linkGroups = [
 export function FooterSection() {
   return (
     <footer className="relative z-10 border-t border-stone-800/70 bg-stone-950/70 pb-16 md:pb-0">
-      {/* Desktop: 4-col grid */}
-      <div className="hidden md:grid mx-auto w-full max-w-6xl gap-10 px-10 py-12 md:grid-cols-4">
-        <div className="md:col-span-1">
-          <Brand />
-          <p className="mt-4 max-w-xs text-sm text-stone-400">
-            A free, open-source command center for orchestrating AI agents on any OpenClaw gateway.
-          </p>
+      {/* Desktop: centered, matching mobile style */}
+      <div className="hidden md:block px-10 py-12 text-center">
+        <div className="flex justify-center mb-4">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/favicon.svg" alt="ClawSuite" className="h-10 w-10 animate-logo-bounce hover:[animation-play-state:paused] hover:scale-110 hover:drop-shadow-[0_0_24px_rgba(249,115,22,0.5)] transition-all duration-300" />
         </div>
-
-        {linkGroups.map((group) => (
-          <div key={group.title}>
-            <h3 className="text-sm font-semibold text-stone-200">{group.title}</h3>
-            <ul className="mt-4 space-y-2.5 text-sm">
-              {group.links.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    target={link.href.startsWith("http") ? "_blank" : undefined}
-                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="text-stone-400 transition hover:text-stone-100"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+          {linkGroups.flatMap((g) => g.links).map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target={link.href.startsWith("http") ? "_blank" : undefined}
+              rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              className="text-stone-400 transition hover:text-stone-100"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
       </div>
 
       {/* Mobile: centered, minimal */}
