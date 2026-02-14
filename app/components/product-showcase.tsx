@@ -9,7 +9,7 @@ const CYCLE_MS = 4500;
 export function ProductShowcase() {
   const [active, setActive] = useState<Screen>("Dashboard");
   const [paused, setPaused] = useState(false);
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
 
   const advance = useCallback(() => {
     setActive((prev) => {

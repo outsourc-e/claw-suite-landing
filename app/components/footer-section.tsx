@@ -21,7 +21,8 @@ const linkGroups = [
     title: "Community",
     links: [
       { label: "X / Twitter", href: "https://x.com/clawsuite" },
-      { label: "Contact", href: "mailto:hello@clawsuite.io" },
+      { label: "Product Hunt", href: "https://www.producthunt.com/products/clawsuite" },
+      { label: "Contact", href: "mailto:clawsuite@gmail.com" },
     ],
   },
 ];
@@ -60,7 +61,7 @@ export function FooterSection() {
 
       <div className="border-t border-stone-800/70">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-6 py-5 text-xs text-stone-500 md:flex-row md:items-center md:justify-between md:px-10">
-          <p>🦞 Built by <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-stone-200 transition">OpenClaw</a></p>
+          <p>🦞 Powered by <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-stone-200 transition">OpenClaw</a></p>
           <p>
             Built by{" "}
             <a href="https://x.com/outsourc_e" target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-stone-200 transition">

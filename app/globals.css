@@ -113,6 +113,65 @@ html {
   50% { transform: translate3d(1.5rem, -1.5rem, 0) scale(1.1); }
 }
 
+/* Atomicbot-inspired glowing button */
+.btn-glow {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-glow::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--brand), var(--brand-dark), var(--accent));
+  opacity: 0;
+  z-index: -1;
+  filter: blur(14px);
+  transition: opacity 0.4s ease;
+}
+
+.btn-glow:hover::before {
+  opacity: 0.7;
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; filter: blur(14px); }
+  50% { opacity: 0.85; filter: blur(20px); }
+}
+
+/* Animated gradient border for cards */
+.card-gradient-border {
+  position: relative;
+  background: linear-gradient(135deg, rgba(249,115,22,0.06), rgba(28,25,23,0.8));
+}
+
+.card-gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 115, 22, 0.3),
+    rgba(249, 115, 22, 0.05) 40%,
+    rgba(249, 115, 22, 0.05) 60%,
+    rgba(251, 146, 60, 0.3)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card-gradient-border:hover::before {
+  opacity: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal-block { opacity: 1; transform: none; filter: none; transition: none; }

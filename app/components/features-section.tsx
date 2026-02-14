@@ -80,10 +80,27 @@ export function FeaturesSection() {
         </h2>
       </Reveal>
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Stats bar */}
+      <Reveal delay={100}>
+        <div className="mt-10 mb-12 flex flex-wrap justify-center gap-6 md:gap-12">
+          {[
+            { value: "3min", label: "Setup time" },
+            { value: "50+", label: "Models" },
+            { value: "<$1", label: "Avg daily cost" },
+            { value: "100%", label: "Open source" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <p className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent md:text-3xl">{stat.value}</p>
+              <p className="mt-1 text-xs text-stone-500">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </Reveal>
+
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature, index) => (
           <Reveal key={feature.title} delay={index * 70}>
-            <article className={`group relative h-full overflow-hidden rounded-2xl border p-5 backdrop-blur transition hover:-translate-y-1 hover:shadow-lg ${feature.accent} bg-gradient-to-br`}>
+            <article className={`card-gradient-border group relative h-full overflow-hidden rounded-2xl border p-5 backdrop-blur transition hover:-translate-y-1 hover:shadow-lg hover:scale-[1.02] ${feature.accent} bg-gradient-to-br`}>
               <div className={`inline-flex rounded-xl p-2.5 ${feature.iconBg}`}>
                 <feature.icon className="h-5 w-5" />
               </div>
