@@ -18,7 +18,7 @@ export default function Home() {
         href="https://www.producthunt.com/products/clawsuite"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed top-3 left-3 z-50 flex items-center gap-2 rounded-full bg-stone-950/80 backdrop-blur-md border border-[#ff6154]/30 px-3 py-1.5 text-[11px] text-stone-300 shadow-lg md:hidden transition hover:border-[#ff6154]/60"
+        className="fixed top-3 right-3 z-50 flex items-center gap-2 rounded-full bg-stone-950/80 backdrop-blur-md border border-[#ff6154]/30 px-3 py-1.5 text-[11px] text-stone-300 shadow-lg md:hidden transition hover:border-[#ff6154]/60"
       >
         <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#ff6154]">
           <svg className="h-3 w-3 text-white" viewBox="0 0 40 40" fill="currentColor"><path d="M22.667 20H17.333V13.333H22.667C24.507 13.333 26 14.827 26 16.667C26 18.507 24.507 20 22.667 20ZM22.667 10H14V30H17.333V23.333H22.667C26.347 23.333 29.333 20.347 29.333 16.667C29.333 12.987 26.347 10 22.667 10Z"/></svg>
