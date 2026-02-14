@@ -13,7 +13,26 @@ export default function Home() {
     <div className="relative min-h-screen overflow-x-clip bg-background text-foreground">
       <BackgroundEffects />
 
-      {/* Product Hunt diagonal ribbon — hero only */}
+      {/* Product Hunt mobile horizontal bar */}
+      <a
+        href="https://www.producthunt.com/products/clawsuite"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative z-50 flex items-center justify-center gap-2.5 bg-[#ff6154] py-2.5 text-white md:hidden transition-colors hover:bg-[#ff5043]"
+      >
+        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white">
+          <svg className="h-3.5 w-3.5 text-[#ff6154]" viewBox="0 0 40 40" fill="currentColor"><path d="M22.667 20H17.333V13.333H22.667C24.507 13.333 26 14.827 26 16.667C26 18.507 24.507 20 22.667 20ZM22.667 10H14V30H17.333V23.333H22.667C26.347 23.333 29.333 20.347 29.333 16.667C29.333 12.987 26.347 10 22.667 10Z"/></svg>
+        </span>
+        <span className="flex flex-col leading-none">
+          <span className="text-[8px] font-semibold tracking-widest uppercase opacity-90">Featured on</span>
+          <span className="text-[13px] font-bold tracking-wide">Product Hunt</span>
+        </span>
+        <span className="flex items-center border-l border-white/30 pl-2.5 ml-0.5">
+          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M7 14l5-5 5 5H7z"/></svg>
+        </span>
+      </a>
+
+      {/* Product Hunt diagonal ribbon — desktop only */}
       <a
         href="https://www.producthunt.com/products/clawsuite"
         target="_blank"
