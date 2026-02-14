@@ -6,7 +6,6 @@ const linkGroups = [
     links: [
       { label: "Features", href: "#features" },
       { label: "GitHub", href: "https://github.com/outsourc-e/clawsuite" },
-      { label: "Docs", href: "https://github.com/outsourc-e/clawsuite#readme" },
     ],
   },
   {
@@ -19,8 +18,6 @@ const linkGroups = [
   {
     title: "Community",
     links: [
-      { label: "X / Twitter", href: "https://x.com/clawsuite" },
-      { label: "Product Hunt", href: "https://www.producthunt.com/products/clawsuite" },
       { label: "Contact", href: "mailto:clawsuite@gmail.com" },
     ],
   },
