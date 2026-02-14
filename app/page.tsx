@@ -20,7 +20,7 @@ export default function Home() {
         rel="noopener noreferrer"
         className="absolute top-4 right-4 z-50 md:hidden group"
       >
-        <div className="flex items-center gap-1.5 rounded-full bg-[#ff6154] pl-2.5 pr-3 py-1.5 shadow-lg shadow-[#ff6154]/30 transition group-hover:shadow-[#ff6154]/50 group-hover:scale-105">
+        <div className="flex items-center gap-1.5 rounded-full bg-[#ff6154]/70 pl-2.5 pr-3 py-1.5 shadow-lg shadow-[#ff6154]/20 transition group-hover:bg-[#ff6154] group-hover:shadow-[#ff6154]/40 group-hover:scale-105">
           {/* P circle */}
           <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white">
             <svg className="h-3.5 w-3.5 text-[#ff6154]" viewBox="0 0 40 40" fill="currentColor"><path d="M22.667 20H17.333V13.333H22.667C24.507 13.333 26 14.827 26 16.667C26 18.507 24.507 20 22.667 20ZM22.667 10H14V30H17.333V23.333H22.667C26.347 23.333 29.333 20.347 29.333 16.667C29.333 12.987 26.347 10 22.667 10Z"/></svg>
