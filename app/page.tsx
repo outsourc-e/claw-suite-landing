@@ -26,9 +26,9 @@ export default function Home() {
             <path d="M60 0 L68 30 L90 8 L78 34 L110 26 L86 46 L118 54 L86 60 L112 80 L80 74 L90 106 L66 82 L60 118 L54 82 L30 106 L40 74 L8 80 L34 60 L2 54 L34 46 L10 26 L42 34 L30 8 L52 30 Z" />
           </svg>
           {/* P logo + upvote */}
-          <div className="relative z-10 flex flex-col items-center gap-0.5">
-            <svg className="h-3 w-3 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M7 14l5-5 5 5H7z"/></svg>
+          <div className="relative z-10 flex items-center gap-1">
             <svg className="h-5 w-5 text-white" viewBox="0 0 40 40" fill="currentColor"><path d="M22.667 20H17.333V13.333H22.667C24.507 13.333 26 14.827 26 16.667C26 18.507 24.507 20 22.667 20ZM22.667 10H14V30H17.333V23.333H22.667C26.347 23.333 29.333 20.347 29.333 16.667C29.333 12.987 26.347 10 22.667 10Z"/></svg>
+            <svg className="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M7 14l5-5 5 5H7z"/></svg>
           </div>
         </div>
       </a>
