@@ -22,7 +22,7 @@ export function HeroSection() {
           </a>
         </div>
 
-        <h2 className="mt-4 text-2xl font-bold tracking-tight text-stone-50 sm:text-3xl md:text-4xl">
+        <h2 className="mt-4 text-4xl font-bold tracking-tight text-stone-50 sm:text-5xl md:text-6xl">
           Claw<span className="text-orange-400">Suite</span>
         </h2>
 
@@ -51,9 +51,10 @@ export function HeroSection() {
         </div>
 
         {/* Social proof — GitHub-based */}
-        <p className="mt-6 text-sm text-stone-500">
-          Self-hosted. Your rules.
-        </p>
+        <div className="mt-6 mx-auto inline-flex items-center gap-2 rounded-full border border-orange-400/20 bg-stone-900/80 px-4 py-2 text-xs text-orange-100 sm:text-sm">
+          <span className="h-2 w-2 animate-pulse rounded-full bg-orange-400" />
+          Free &amp; open source — built on OpenClaw
+        </div>
       </Reveal>
 
       <Reveal delay={200}>
