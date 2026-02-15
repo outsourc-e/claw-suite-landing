@@ -28,9 +28,9 @@ export function HeroSection() {
         </div>
 
         <h1 className="mx-auto mt-8 max-w-4xl text-balance text-3xl font-semibold tracking-tight text-stone-50 sm:text-4xl md:text-5xl lg:text-7xl">
-          Your AI workspace,{" "}
+          Command center{" "}
           <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-amber-300 bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(249,115,22,0.3)]">
-            supercharged
+            for OpenClaw
           </span>
         </h1>
 
