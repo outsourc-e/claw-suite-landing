@@ -6,7 +6,11 @@ export function HeroSection() {
     <section id="top" className="relative py-10 md:py-24">
       {/* Centered logo fading into heading */}
       <Reveal className="mx-auto max-w-5xl text-center">
-        <div className="flex justify-center mb-6">
+        <h2 className="text-4xl font-bold tracking-tight text-stone-50 sm:text-5xl md:text-6xl">
+          Claw<span className="text-orange-400">Suite</span>
+        </h2>
+
+        <div className="flex justify-center mt-6 mb-6">
           <a
             href="https://github.com/outsourc-e/clawsuite"
             target="_blank"
@@ -21,10 +25,6 @@ export function HeroSection() {
             />
           </a>
         </div>
-
-        <h2 className="mt-4 text-4xl font-bold tracking-tight text-stone-50 sm:text-5xl md:text-6xl">
-          Claw<span className="text-orange-400">Suite</span>
-        </h2>
 
         <h1 className="mx-auto mt-6 max-w-4xl text-balance text-3xl font-semibold tracking-tight text-stone-50 sm:text-4xl md:text-5xl lg:text-7xl">
           Command center{" "}
