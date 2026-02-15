@@ -74,7 +74,7 @@ export function FooterSection() {
           <p>
             Built by{" "}
             <a href="https://x.com/outsourc_e" target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-stone-200 transition">
-              @outsourc-e
+              @outsourc_e
             </a>
             {" · "}
             <a href="https://buildingthefuture.io" target="_blank" rel="noopener noreferrer" className="text-stone-400 hover:text-stone-200 transition">
