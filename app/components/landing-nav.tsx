@@ -8,29 +8,41 @@ const navLinks = [
 
 export function LandingNav() {
   return (
-    <header className="sticky top-0 z-50 border-b border-stone-800/70 bg-stone-950/80 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 md:px-10 md:py-4">
-        <a href="#top" aria-label="ClawSuite home">
-          <Brand compact />
-        </a>
+    <>
+      {/* Mobile: floating brand badge top-left (mirrors PH badge top-right) */}
+      <a
+        href="#top"
+        aria-label="ClawSuite home"
+        className="fixed top-4 left-4 z-50 md:hidden flex items-center gap-2 rounded-full bg-stone-900/80 border border-stone-700/50 backdrop-blur-lg px-3 py-2 shadow-lg"
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/favicon.svg" alt="ClawSuite" className="h-6 w-6 drop-shadow-[0_0_8px_rgba(249,115,22,0.3)]" />
+        <span className="text-sm font-bold text-stone-50">
+          Claw<span className="text-orange-400">Suite</span>
+        </span>
+      </a>
 
-        {/* Desktop nav links */}
-        <nav className="hidden items-center gap-8 text-sm text-stone-300 md:flex">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target={link.href.startsWith("http") ? "_blank" : undefined}
-              rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="transition hover:text-stone-100"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+      {/* Desktop: full sticky nav bar */}
+      <header className="sticky top-0 z-50 border-b border-stone-800/70 bg-stone-950/80 backdrop-blur-xl hidden md:block">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-10 py-4">
+          <a href="#top" aria-label="ClawSuite home">
+            <Brand compact />
+          </a>
 
-        {/* Desktop GitHub button only */}
-        <div className="hidden md:flex items-center gap-3">
+          <nav className="flex items-center gap-8 text-sm text-stone-300">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="transition hover:text-stone-100"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
           <a
             href="https://github.com/outsourc-e/clawsuite"
             target="_blank"
@@ -41,7 +53,7 @@ export function LandingNav() {
             GitHub
           </a>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }
