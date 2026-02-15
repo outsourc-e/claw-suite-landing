@@ -57,7 +57,7 @@ export function HeroSection() {
       </Reveal>
 
       <Reveal delay={200}>
-        <div id="demo">
+        <div id="demo" className="scroll-mt-24">
           <ProductShowcase />
         </div>
       </Reveal>
