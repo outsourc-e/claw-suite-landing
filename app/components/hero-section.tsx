@@ -22,7 +22,11 @@ export function HeroSection() {
           </a>
         </div>
 
-        <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-orange-400/20 bg-stone-900/80 px-4 py-2 text-xs text-orange-100 sm:text-sm">
+        <h2 className="mt-4 text-2xl font-bold tracking-tight text-stone-50 sm:text-3xl md:text-4xl">
+          Claw<span className="text-orange-400">Suite</span>
+        </h2>
+
+        <div className="mt-4 mx-auto inline-flex items-center gap-2 rounded-full border border-orange-400/20 bg-stone-900/80 px-4 py-2 text-xs text-orange-100 sm:text-sm">
           <span className="h-2 w-2 animate-pulse rounded-full bg-orange-400" />
           Free &amp; open source — built on OpenClaw
         </div>
