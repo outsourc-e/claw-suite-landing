@@ -8,12 +8,13 @@ const navLinks = [
 
 export function LandingNav() {
   return (
-    <header className="sticky top-0 z-40 border-b border-stone-800/70 bg-stone-950/70 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 md:px-10">
+    <header className="sticky top-0 z-50 border-b border-stone-800/70 bg-stone-950/80 backdrop-blur-xl">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 md:px-10 md:py-4">
         <a href="#top" aria-label="ClawSuite home">
           <Brand compact />
         </a>
 
+        {/* Desktop nav links */}
         <nav className="hidden items-center gap-8 text-sm text-stone-300 md:flex">
           {navLinks.map((link) => (
             <a
@@ -28,7 +29,8 @@ export function LandingNav() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        {/* Desktop GitHub button only */}
+        <div className="hidden md:flex items-center gap-3">
           <a
             href="https://github.com/outsourc-e/clawsuite"
             target="_blank"
