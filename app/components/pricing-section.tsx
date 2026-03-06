@@ -1,48 +1,136 @@
+"use client";
+
+import { useState } from "react";
 import { Reveal } from "./reveal";
 
-const highlights = [
+const tiers = [
   {
-    icon: "🆓",
-    title: "100% free",
-    description: "No premium tiers, no usage limits, no hidden fees. The full product, forever.",
+    name: "Free",
+    monthly: 0,
+    yearly: 0,
+    description: "Everything you need to get started",
+    features: [
+      "All features included",
+      "1 gateway connection",
+      "Community support",
+      "Self-hosted",
+      "Unlimited models",
+    ],
+    cta: "Get Started",
+    href: "https://github.com/outsourc-e/clawsuite",
+    highlighted: false,
   },
   {
-    icon: "🔓",
-    title: "Open source",
-    description: "MIT licensed. Fork it, modify it, self-host it, contribute back. Your code, your rules.",
+    name: "Pro",
+    monthly: 20,
+    yearly: 200,
+    description: "Cloud gateway + priority support",
+    features: [
+      "Everything in Free",
+      "Cloud gateway included",
+      "Priority support",
+      "Auto-updates",
+      "Advanced analytics",
+    ],
+    cta: "Start Pro",
+    href: "https://buy.polar.sh/polar_cl_BgxEphBTa8",
+    highlighted: true,
   },
   {
-    icon: "🏠",
-    title: "Self-hosted",
-    description: "Runs on your machine. Your data never leaves your infrastructure. Zero cloud dependency.",
-  },
-  {
-    icon: "🔌",
-    title: "Any gateway",
-    description: "Connect to any OpenClaw gateway — local, remote, or cloud. Plug in and go.",
+    name: "Team",
+    monthly: 50,
+    yearly: 500,
+    description: "For teams running multiple agents",
+    features: [
+      "Everything in Pro",
+      "5 cloud gateways",
+      "Team management",
+      "Shared agent configs",
+      "Dedicated support",
+    ],
+    cta: "Start Team",
+    href: "https://buy.polar.sh/polar_cl_BgxEphBTa8",
+    highlighted: false,
   },
 ];
 
 export function PricingSection() {
+  const [yearly, setYearly] = useState(false);
+
   return (
-    <section id="open-source" className="py-20 md:py-24">
+    <section id="pricing" className="py-20 md:py-24">
       <Reveal className="mx-auto max-w-2xl text-center">
-        <p className="text-xs uppercase tracking-[0.24em] text-orange-300/80">Open Source</p>
+        <p className="text-xs uppercase tracking-[0.24em] text-orange-300/80">
+          Pricing
+        </p>
         <h2 className="mt-4 text-3xl font-semibold tracking-tight text-stone-100 md:text-4xl">
-          Free &amp; open source, forever
+          Free forever. Cloud when you need it.
         </h2>
         <p className="mt-4 text-stone-400 text-lg">
-          MIT licensed. Bring your own API keys, connect your gateway, and you&apos;re running in minutes.
+          Self-host for free, or let us handle the infrastructure.
         </p>
+
+        {/* Yearly toggle */}
+        <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-stone-700/60 bg-stone-900/80 px-4 py-2">
+          <span className={`text-sm ${!yearly ? "text-orange-300 font-medium" : "text-stone-500"}`}>Monthly</span>
+          <button
+            type="button"
+            onClick={() => setYearly(!yearly)}
+            className={`relative h-6 w-11 rounded-full transition-colors ${yearly ? "bg-orange-500" : "bg-stone-700"}`}
+          >
+            <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform ${yearly ? "translate-x-5" : "translate-x-0.5"}`} />
+          </button>
+          <span className={`text-sm ${yearly ? "text-orange-300 font-medium" : "text-stone-500"}`}>
+            Yearly <span className="text-xs text-emerald-400">save 17%</span>
+          </span>
+        </div>
       </Reveal>
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {highlights.map((item, index) => (
-          <Reveal key={item.title} delay={index * 80}>
-            <article className="card-gradient-border h-full rounded-2xl border border-stone-800/80 bg-stone-900/60 p-6 backdrop-blur text-center transition hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-500/5">
-              <span className="text-3xl">{item.icon}</span>
-              <h3 className="mt-4 text-base font-semibold text-stone-100">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-stone-400">{item.description}</p>
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+        {tiers.map((tier, index) => (
+          <Reveal key={tier.name} delay={index * 80}>
+            <article
+              className={`relative h-full rounded-2xl border p-6 backdrop-blur transition hover:-translate-y-1 hover:shadow-lg ${
+                tier.highlighted
+                  ? "border-orange-500/50 bg-gradient-to-br from-orange-500/10 to-stone-900/80 shadow-lg shadow-orange-500/10"
+                  : "card-gradient-border border-stone-800/80 bg-stone-900/60"
+              }`}
+            >
+              {tier.highlighted && (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-3 py-1 text-xs font-semibold text-white">
+                  Recommended
+                </span>
+              )}
+              <h3 className="text-lg font-semibold text-stone-100">{tier.name}</h3>
+              <p className="mt-1 text-sm text-stone-400">{tier.description}</p>
+              <div className="mt-4">
+                <span className="text-4xl font-bold text-stone-50">
+                  ${yearly ? tier.yearly : tier.monthly}
+                </span>
+                <span className="text-stone-500 text-sm">
+                  {tier.monthly === 0 ? "/forever" : yearly ? "/year" : "/mo"}
+                </span>
+              </div>
+              <ul className="mt-6 space-y-2.5">
+                {tier.features.map((feature) => (
+                  <li key={feature} className="flex items-center gap-2 text-sm text-stone-300">
+                    <span className="text-orange-400">✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={tier.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`mt-6 block w-full rounded-xl py-2.5 text-center text-sm font-semibold transition ${
+                  tier.highlighted
+                    ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/25 hover:from-orange-400 hover:to-orange-500"
+                    : "border border-stone-700 bg-stone-800/60 text-stone-200 hover:border-stone-600 hover:bg-stone-800"
+                }`}
+              >
+                {tier.cta}
+              </a>
             </article>
           </Reveal>
         ))}
@@ -50,10 +138,9 @@ export function PricingSection() {
 
       <Reveal delay={200}>
         <p className="mt-12 mx-auto max-w-xl text-center text-sm text-stone-500 leading-relaxed">
-          ClawSuite isn&apos;t trying to replace ChatGPT. It&apos;s for people who want multi-model access, agent orchestration, and full control over their data.
+          All plans include the full open-source product. Cloud plans add managed infrastructure so you don&apos;t have to self-host.
         </p>
       </Reveal>
-
     </section>
   );
 }

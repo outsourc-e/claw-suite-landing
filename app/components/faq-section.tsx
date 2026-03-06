@@ -41,6 +41,16 @@ const faqs: FaqItem[] = [
     a: "Those are single-vendor, cloud-only, closed-source. ClawSuite connects to ANY model, runs on YOUR hardware, and lets you orchestrate multiple agents in parallel. Plus it's free and you own everything.",
   },
   {
+    emoji: "🖥️",
+    q: "Is ClawSuite a desktop app or web app?",
+    a: "Both. ClawSuite ships as a native Electron app for macOS, Windows, and Linux, and also runs as a web dashboard you can self-host. ClawSuite Cloud gives you a managed version with zero setup.",
+  },
+  {
+    emoji: "☁️",
+    q: "What is ClawSuite Cloud?",
+    a: "A managed hosting option where we run the gateway for you. Same open-source ClawSuite, but we handle the infrastructure. You get a cloud gateway URL, plug it into the app, and you're up in 30 seconds.",
+  },
+  {
     emoji: "🍕",
     q: "Can it order me pizza?",
     a: "...technically yes, if you give an agent browser access and your delivery app credentials. But maybe start with something less carb-heavy, like automating your CI pipeline.",
