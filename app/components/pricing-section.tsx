@@ -33,7 +33,7 @@ const tiers = [
       "Advanced analytics",
     ],
     cta: "Start Pro",
-    href: "https://buy.polar.sh/polar_cl_BgxEphBTa8",
+    href: "https://buy.polar.sh/polar_cl_suIyJn1xrlUaOwAuVexASQRNyHaw0SWlH0bE62qh63q",
     highlighted: true,
   },
   {
@@ -49,7 +49,7 @@ const tiers = [
       "Dedicated support",
     ],
     cta: "Start Team",
-    href: "https://buy.polar.sh/polar_cl_BgxEphBTa8",
+    href: "https://buy.polar.sh/polar_cl_iFQjUWj8PaBrTUXxKW4jHkDerEnOTKB46ge7m23ge7z",
     highlighted: false,
   },
 ];
